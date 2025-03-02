@@ -10,7 +10,7 @@ class OpenGame:
         def open(self, category, game_name):
     
                 # Navigate to the demo page
-                self.page.goto(self.url)
+                self.page.goto(self.url, wait_until='domcontentloaded')
         
                 # Locate the iframe by its ID
                 iframe = self.page.frame_locator('#betgames_iframe')
